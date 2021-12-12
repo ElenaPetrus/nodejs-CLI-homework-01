@@ -1,7 +1,7 @@
 const fs = require("fs/promises");
 const contactsPath = require("./contactPath");
 
-const getAll = async () => {
+const getContactsList = async () => {
   try {
     const data = await fs.readFile(contactsPath);
     const contacts = JSON.parse(data);
@@ -11,4 +11,4 @@ const getAll = async () => {
   }
 };
 
-module.exports = getAll;
+module.exports = getContactsList;

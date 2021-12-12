@@ -1,0 +1,84 @@
+
+// const fileOperation = async (action, filePath, data) => {
+//   switch (action) {
+//     case "read":
+//       const dataFile = await fs.readFile(filePath, "utf-8");
+//       console.log(dataFile);
+//       break;
+
+//     case "add":
+//       await fs.appendFile(filePath, data);
+//       break;
+//     case "replace":
+//       await fs.writeFile(filePath, data);
+//     default:
+//       console.log("Unknown operation");
+//   }
+// };
+// const filePath = "dp/file.txt";
+// // fileOperation("read", filePath);
+// // fileOperation("add", filePath, " Elena");
+// // fileOperation("replace", filePath, "Я все перезаписал");
+
+
+index.js
+
+// const contactsOperations = require("./dp");
+// const invokeAction = async ({ action, id, name, email, phone }) => {
+//   try {
+//     switch (action) {
+//       case "getContactsList":
+//         const contacts = await contactsOperations.getContactsList();
+//         console.log(contacts);
+//         break;
+//       case "getById":
+//         const contact = await contactsOperations.getById(id);
+//         console.log(contact);
+//         break;
+//       case "add":
+//         const newContact = await contactsOperations.add({ name, email, phone });
+//         console.log(newContact);
+//         break;
+//       case "updateById":
+//         const updateContacts = await contactsOperations.updateById({
+//           id,
+//           name,
+//           email,
+//           phone,
+//         });
+//         console.log(updateContacts);
+//         break;
+//       case "removeById":
+//         const removeContact = await contactsOperations.removeById(id);
+//         console.log(removeContact);
+//         break;
+//       default:
+//         console.warn("\x1B[31m Unknown action type!");
+//     }
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+
+// invokeAction({ action: "getContactsList" });
+
+// const id="3"
+// invokeAction({ action: "getById", id });
+
+// const contactData = {
+//   name: "Elena Bird",
+//   email: "bird@vestibul.co.uk",
+//   phone: "(999) 915-3892",
+// };
+// invokeAction({ action: "add", ...contactData });
+
+// const updateData = {
+//   name: "Alec Howard",
+//   email: "alec@gmail.com",
+//   phone: "(048) 200-0000",
+// };
+// const updateId = "10";
+// invokeAction({ action: "updateById", ...updateData, id: updateId });
+
+// const removeId = "5";
+// invokeAction({ action: "removeById", id: removeId });
