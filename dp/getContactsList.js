@@ -7,7 +7,7 @@ const getContactsList = async () => {
     const contacts = JSON.parse(data);
     return contacts;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 

@@ -1,4 +1,6 @@
-
+npm init
+npm install
+npm run start:dev
 // const fileOperation = async (action, filePath, data) => {
 //   switch (action) {
 //     case "read":
@@ -6,7 +8,7 @@
 //       console.log(dataFile);
 //       break;
 
-//     case "add":
+//     case "addContact":
 //       await fs.appendFile(filePath, data);
 //       break;
 //     case "replace":
@@ -17,7 +19,7 @@
 // };
 // const filePath = "dp/file.txt";
 // // fileOperation("read", filePath);
-// // fileOperation("add", filePath, " Elena");
+// // fileOperation("addContact", filePath, " Elena");
 // // fileOperation("replace", filePath, "Я все перезаписал");
 
 
@@ -31,12 +33,12 @@ index.js
 //         const contacts = await contactsOperations.getContactsList();
 //         console.log(contacts);
 //         break;
-//       case "getById":
-//         const contact = await contactsOperations.getById(id);
+//       case " getContactById":
+//         const contact = await contactsOperations. getContactById(id);
 //         console.log(contact);
 //         break;
-//       case "add":
-//         const newContact = await contactsOperations.add({ name, email, phone });
+//       case "addContact":
+//         const newContact = await contactsOperations.addContact({ name, email, phone });
 //         console.log(newContact);
 //         break;
 //       case "updateById":
@@ -48,8 +50,8 @@ index.js
 //         });
 //         console.log(updateContacts);
 //         break;
-//       case "removeById":
-//         const removeContact = await contactsOperations.removeById(id);
+//       case "removeContact":
+//         const removeContact = await contactsOperations.removeContact(id);
 //         console.log(removeContact);
 //         break;
 //       default:
@@ -63,14 +65,14 @@ index.js
 // invokeAction({ action: "getContactsList" });
 
 // const id="3"
-// invokeAction({ action: "getById", id });
+// invokeAction({ action: " getContactById", id });
 
 // const contactData = {
 //   name: "Elena Bird",
 //   email: "bird@vestibul.co.uk",
 //   phone: "(999) 915-3892",
 // };
-// invokeAction({ action: "add", ...contactData });
+// invokeAction({ action: "addContact", ...contactData });
 
 // const updateData = {
 //   name: "Alec Howard",
@@ -81,4 +83,4 @@ index.js
 // invokeAction({ action: "updateById", ...updateData, id: updateId });
 
 // const removeId = "5";
-// invokeAction({ action: "removeById", id: removeId });
+// invokeAction({ action: "removeContact", id: removeId });

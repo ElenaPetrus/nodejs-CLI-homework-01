@@ -1,20 +1,19 @@
-const updateContacts = require("./updateContacts");
 const getContactsList = require("./getContactsList");
+const undateContacts = require("./updateContacts");
 
-async function updateById({ id, name, email, phone }) {
+async function removeContact(id) {
   try {
     const contacts = await getContactsList();
     const idx = contacts.findIndex((item) => item.id === id);
     if (idx === -1) {
       return null;
     }
-    contacts[idx] = { id, name, email, phone };
-    await updateContacts(contacts);
+    const removeContacts = contacts.splice(idx, 1);
+    await undateContacts(contacts);
     console.table(contacts);
-    return contacts[idx];
+    return removeContacts;
   } catch (error) {
     console.log(error);
   }
 }
-
-module.exports = updateById;
+module.exports = removeContact;

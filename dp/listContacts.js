@@ -1,11 +1,14 @@
 const getContactsList = require("./getContactsList");
 
 const listContacts = async () => {
-  const contactsListArr = await getContactsList();
+ try { const contactsListArr = await getContactsList();
   if (contactsListArr) {
     console.table(contactsListArr);
   }
   return;
+}catch (error) {
+  console.log(error);
+}
 };
 
 module.exports = listContacts;

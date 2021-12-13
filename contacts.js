@@ -1,17 +1,17 @@
 const getContactsList = require("./dp/getContactsList");
-const getById = require("./dp/getById");
-const add = require("./dp/add");
+const getContactById = require("./dp/getContactById");
+const addContact = require("./dp/addContact");
 const updateById = require("./dp/updateById");
-const removeById = require("./dp/removeById");
+const removeContact = require("./dp/removeContact");
 const listContacts = require("./dp/listContacts");
 
 module.exports = {
   getContactsList,
   listContacts,
-  getById,
-  add,
+  getContactById,
+  addContact,
   updateById,
-  removeById,
+  removeContact,
 };
 
 // /*
@@ -32,6 +32,6 @@ module.exports = {
 //   // ...твой код
 // }
 
-// function addContact(name, email, phone) {
+// function addContactContact(name, email, phone) {
 //   // ...твой код
 // }
